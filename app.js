@@ -24,7 +24,7 @@ const app = express();
 //     console.log('server is running on host: ' + process.env.HOST);
 // });
 
-let IP = "192.168.242.128";
+let IP = "127.0.0.1";
 let PORT = 8080;
 app.listen(PORT, IP, function(){
   console.log('Server is running on port ' + PORT);
