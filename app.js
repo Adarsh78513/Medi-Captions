@@ -157,6 +157,18 @@ app.post('/login', async (req, res) => {
     }
 });
 
+app.get('/register', (req, res) => {
+  res.render('register');
+});
+
+app.get('/upload', (req, res) => {
+  res.render('upload');
+});
+
+app.get('/caption', (req, res) => {
+  res.render('caption');
+});
+
 app.get('/', async (req, res) => {
     res.render('home');
 });
