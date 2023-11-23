@@ -96,79 +96,50 @@ const isAuthenticated = (req, res, next) => {
 
 // Get and post requests below....
 
+// Login!!!
 app.get('/login', (req, res) => {
   res.render('login');
 });
 
-app.post('/login', async (req, res) => {
-    const { user_name, password } = req.body;
-    req.session.user_name  = user_name;
-    req.session.password = password;
-    console.log(user_name, password);
-    const query = `SELECT * FROM user WHERE user_name = '${user_name}' AND password = '${password}'`;
-    const result = await run_query(query);
-    console.log("result");
-    console.log(result);
-    
-    if(result.length == 0){
-      res.redirect('/login');
-    }
-    const mail_verified = result[0].email_verified;
-    const mail_verified_bool = mail_verified.readUIntLE(0, 1);
-    const super_u = result[0].super_user;
-    req.session.super_user = super_u.readUIntLE(0, 1);
-    console.log("super_user: ", req.session.super_user);
-    req.session.time_slot_duration = result[0].time_slot_duration;
-    console.log("allowed time slot duration ",  req.session.time_slot_duration);
-    
-    // If the user exists and the mail is verified then go to the home page else remain in the login page
-    if(result.length > 0 && mail_verified_bool == 1){
-      req.session.loggeduser = true;
-      req.session.user= user_name;
-      res.redirect('/');
-    } else if (result.length > 0 && mail_verified_bool == 0){
-      console.log("Please verify your email");
-  
-  
-  
-      req.session.email = result[0].email;
-  
-  
-      req.session.otp = Math.floor(100000 + Math.random() * 900000);
-    
-      //sending the mail
-      var mailOptions = {
-        from: 'adarsh20274@iiitd.ac.in',
-        to: req.session.email,
-        subject: 'OTP for login',
-        text: 'Your OTP is ' + req.session.otp
-      };
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-      });
-  
-      res.redirect('/verification');
-    } else {
-      res.redirect('/login');
-    }
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  console.log('Username:', username);
+  console.log('Password:', password);
+
+  res.send('Login successful!');
+
+  res.redirect('/home');
 });
 
+// Register!!!
 app.get('/register', (req, res) => {
   res.render('register');
 });
 
+app.post('/register', (req, res) => {
+  const { username, email, password } = req.body;
+
+  console.log('Username:', username);
+  console.log('EmailID:', email);
+  console.log('Password:', password);
+
+  res.send('Registeration successful!');
+
+  res.redirect('/login');
+});
+
+// Upload!!!
 app.get('/upload', (req, res) => {
   res.render('upload');
 });
 
+// Caption!!!
 app.get('/caption', (req, res) => {
   res.render('caption');
 });
 
+// Home!!!
 app.get('/', async (req, res) => {
     res.render('home');
 });
