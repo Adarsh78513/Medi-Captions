@@ -9,6 +9,7 @@ console.log('This is home.js');
 var mysql = require('mysql2');
 var session = require('express-session');
 const { get } = require('http');
+const { MySQLUsername, MySQLPassword, MySQLDatabase, MySQL_IP, MySQL_Port, compIP, compPort } = require('./creds.js');
 
 // var http = require('http');
 
@@ -24,8 +25,8 @@ const app = express();
 //     console.log('server is running on host: ' + process.env.HOST);
 // });
 
-let IP = "127.0.0.1";
-let PORT = 8080;
+let IP = compIP;
+let PORT = compPort;
 app.listen(PORT, IP, function(){
   console.log('Server is running on port ' + PORT);
   console.log('server is running on host: ' + IP);
@@ -67,12 +68,12 @@ const isAuthenticated = (req, res, next) => {
 };
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "fhirdatabase",
+  host: MySQL_IP,
+  user: MySQLUsername,
+  password: MySQLPassword,
+  database: MySQLDatabase,
   //don't change this, this is the default port for mysql
-  port: 3306,
+  port: MySQL_Port,
   multipleStatements: true
 });
 
@@ -141,6 +142,11 @@ app.get('/caption', (req, res) => {
 
 // Home!!!
 app.get('/', async (req, res) => {
+    // run query
+    const query = "SELECT * FROM patient;";
+    const result = await run_query(query);
+    console.log(query);
+    console.log(result);
     res.render('home');
 });
 
