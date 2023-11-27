@@ -66,33 +66,33 @@ const isAuthenticated = (req, res, next) => {
   return;
 };
 
-// var con = mysql.createConnection({
-//   host: "192.168.28.65",
-//   user: "any_connect",
-//   password: "adarsh123",
-//   database: "reservation",
-//   //don't change this, this is the default port for mysql
-//   port: 3306,
-//   multipleStatements: true
-// });
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "root",
+  database: "fhirdatabase",
+  //don't change this, this is the default port for mysql
+  port: 3306,
+  multipleStatements: true
+});
 
-// con.connect(function(err) {
-//   if (err) throw err;
-//   console.log("Connected!");
-//   con.query("SELECT * FROM res", function (err, result, fields) {
-//     if (err) throw err;
-//     console.log(result);
-//   });
-// });
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  con.query("SELECT * FROM patient", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
 
-// function run_query(query){
-//   return new Promise((resolve, reject) => {
-//     con.query(query, (err, result) => {
-//       if(err) reject(err);
-//       resolve(result);
-//     });
-//   });
-// }
+function run_query(query){
+  return new Promise((resolve, reject) => {
+    con.query(query, (err, result) => {
+      if(err) reject(err);
+      resolve(result);
+    });
+  });
+}
 
 // Get and post requests below....
 
