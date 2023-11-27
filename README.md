@@ -11,6 +11,7 @@
 1. Clone the repository
 2. Run all the SQL queries in the file `FHIRResources.sql` in your MySQL Workbench (This will create the database and all the tables)
 3. Run all the SQL queries in the file `dataGen.sql` in your MySQL Workbench (This will populate the database with data)
+4. Ensure that your credentials are set correctly in the `creds.js` file, so the code can connect to the database.
 
 ## Steps to Run the Project
 1. Clone the repository
