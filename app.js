@@ -107,10 +107,7 @@ app.post('/login', (req, res) => {
 
   console.log('Username:', username);
   console.log('Password:', password);
-
-  res.send('Login successful!');
-
-  res.redirect('/home');
+  res.redirect('/');
 });
 
 // Register!!!
@@ -124,9 +121,6 @@ app.post('/register', (req, res) => {
   console.log('Username:', username);
   console.log('EmailID:', email);
   console.log('Password:', password);
-
-  res.send('Registeration successful!');
-
   res.redirect('/login');
 });
 
@@ -145,8 +139,8 @@ app.get('/', async (req, res) => {
     // run query
     const query = "SELECT * FROM patient;";
     const result = await run_query(query);
-    console.log(query);
-    console.log(result);
+    // console.log(query);
+    // console.log(result);
     res.render('home');
 });
 
