@@ -1,5 +1,4 @@
 show databases;
-show tables;
 -- Create the database
 CREATE DATABASE FHIRDatabase;
 
@@ -19,6 +18,10 @@ CREATE TABLE Patient (
     MultipleBirthInteger INT,
     Photo TEXT  -- URL or binary data
 );
+ALTER TABLE Patient
+ADD Username VARCHAR(50) NOT NULL,
+ADD Password VARCHAR(255) NOT NULL;
+
 
 CREATE TABLE PatientName (
     NameID INT AUTO_INCREMENT PRIMARY KEY,

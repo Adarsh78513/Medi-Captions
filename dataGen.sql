@@ -1,18 +1,18 @@
 -- Data Population Script for Medi-Captions Database
 
 -- Patient Table
-INSERT INTO Patient (Active, Gender, BirthDate, DeceasedBoolean, DeceasedDateTime, MaritalStatus, MultipleBirthBoolean, MultipleBirthInteger, Photo)
+INSERT INTO Patient (Active, Gender, BirthDate, DeceasedBoolean, DeceasedDateTime, MaritalStatus, MultipleBirthBoolean, MultipleBirthInteger, Photo, Username, Password)
 VALUES
-(true, 'Male', '1990-01-01', false, NULL, 'Single', false, NULL, 'https://example.com/photo1.jpg'),
-(true, 'Female', '1985-05-15', false, NULL, 'Married', false, NULL, 'https://example.com/photo2.jpg'),
-(true, 'Non-Binary', '1998-10-20', false, NULL, 'Divorced', true, 2, 'https://example.com/photo3.jpg'),
-(true, 'Male', '1980-03-12', true, '2022-01-15 08:30:00', 'Widowed', false, NULL, 'https://example.com/photo4.jpg'),
-(true, 'Female', '1995-08-03', false, NULL, 'Single', false, NULL, 'https://example.com/photo5.jpg'),
-(true, 'Male', '1992-11-27', false, NULL, 'Married', false, NULL, 'https://example.com/photo6.jpg'),
-(true, 'Female', '1987-04-08', false, NULL, 'Single', false, NULL, 'https://example.com/photo7.jpg'),
-(true, 'Male', '1999-09-18', false, NULL, 'Single', false, NULL, 'https://example.com/photo8.jpg'),
-(true, 'Female', '1983-06-25', true, '2022-02-10 12:45:00', 'Widowed', false, NULL, 'https://example.com/photo9.jpg'),
-(true, 'Male', '1994-12-07', false, NULL, 'Married', false, NULL, 'https://example.com/photo10.jpg');
+(true, 'Male', '1990-01-01', false, NULL, 'Single', false, NULL, 'https://example.com/photo1.jpg', 'user1', 'password1'),
+(true, 'Female', '1985-05-15', false, NULL, 'Married', false, NULL, 'https://example.com/photo2.jpg', 'user2', 'password2'),
+(true, 'Non-Binary', '1998-10-20', false, NULL, 'Divorced', true, 2, 'https://example.com/photo3.jpg', 'user3', 'password3'),
+(true, 'Male', '1980-03-12', true, '2022-01-15 08:30:00', 'Widowed', false, NULL, 'https://example.com/photo4.jpg', 'user4', 'password4'),
+(true, 'Female', '1995-08-03', false, NULL, 'Single', false, NULL, 'https://example.com/photo5.jpg', 'user5', 'password5'),
+(true, 'Male', '1992-11-27', false, NULL, 'Married', false, NULL, 'https://example.com/photo6.jpg', 'user6', 'password6'),
+(true, 'Female', '1987-04-08', false, NULL, 'Single', false, NULL, 'https://example.com/photo7.jpg', 'user7', 'password7'),
+(true, 'Male', '1999-09-18', false, NULL, 'Single', false, NULL, 'https://example.com/photo8.jpg', 'user8', 'password8'),
+(true, 'Female', '1983-06-25', true, '2022-02-10 12:45:00', 'Widowed', false, NULL, 'https://example.com/photo9.jpg', 'user9', 'password9'),
+(true, 'Male', '1994-12-07', false, NULL, 'Married', false, NULL, 'https://example.com/photo10.jpg', 'user10', 'password10');
 
 -- PatientName Table
 INSERT INTO PatientName (PatientID, FamilyName, GivenName, MiddleName, Prefix, Suffix, UsageType)
