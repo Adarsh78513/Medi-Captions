@@ -144,6 +144,10 @@ app.get('/', async (req, res) => {
     res.render('home');
 });
 
+// MoreDetails!!!
+app.get('/moredetail', async (req, res) => {
+  res.render('moredetail');
+});
 // app.use((req, res) => {
 //     res.status(404).render('404');
 // });

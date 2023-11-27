@@ -1,58 +1,93 @@
-<!-- views/home.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medi-Captions</title>
+    <title>Medi Caption</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
+            margin: 0;
+            background-image: url("https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
         }
 
-        .container {
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px 35px; /* Adjusted padding */
+            border-radius: 8px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
             text-align: center;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            margin: 0 20px; /* Added margin */
         }
 
-        h1 {
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+
+        img {
+            border-radius: 50%;
+            max-width: 100%;
+            height: 180px; /* Adjusted height */
+            object-fit: cover;
+        }
+
+        h2 {
             color: #333;
         }
 
-        .button-container {
-            margin-top: 20px;
-        }
-
-        .button-container button {
-            background-color: #007bff;
+        p {
             color: white;
-            padding: 10px 15px;
-            margin: 0 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            margin-bottom: 20px;
         }
 
-        .button-container button:hover {
-            background-color: #0056b3;
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 15px 0;
+            font-size: 22px;
+            font-weight: 500;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Medi-Captions</h1>
+    <div class="cards-container">
+        
+        <div class="card">
+            <img src="https://pngimg.com/d/plus_PNG12.png" alt="">
+            <h2>Create Patient</h2>
+            <button onclick="location.href='/moredetail'">Click Here</button>
+        </div>
 
-        <div class="button-container">
-            <button onclick="location.href='/create-patient'">Create Patient</button>
-            <button onclick="location.href='/search-patient'">Search Patient</button>
-            <button onclick="location.href='/upload'">Create Captions</button>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Google_Magnifying_Glass.svg/1200px-Google_Magnifying_Glass.svg.png" alt="">
+            <h2>Search Patient</h2>
+            <button>Click Here</button>
+        </div>
+
+        <div class="card">
+            <img src="https://freepngimg.com/save/55592-gallery-free-hq-image/964x912" alt="">
+            <h2>Create Caption</h2>
+            <button onclick="location.href='/upload'">Click Here</button>
         </div>
     </div>
 </body>
