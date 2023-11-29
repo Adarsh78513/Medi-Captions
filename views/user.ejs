@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi Caption</title>
+</head>
+<body>
+    <h1>Hello <%= username %> </h1>
+    <a href="/logout">Logout</a>
+    
+    
+    <p>TODO Diagnosis:</p>
+    <p>1. From problem table</p>
+    <p>2. From family history table</p>
+    <p>3. From family mamber condition</p>
+    <p>4. From ClinicalImpression</p>
+    <p>5. From ClinicalImpressionFinding</p>
+    <p>6. From DetectedIssue</p>
+
+    <% if(result_problem.length > 0) { %>
+        <p>Problem:</p>
+        <ul>
+            <% result_problem.forEach(function(problem) { %>
+                <p>DateRecorded: <%= problem.DateRecorded %> </p>
+                <p>OnsetDateTime: <%= problem.OnsetDateTime %></p>
+                <p>Category: <%= problem.Category %></p>
+                <p>ClinicalStatus: <%= problem.ClinicalStatus %></p>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No problem</p>
+    <% } %>
+
+</body>
+</html>

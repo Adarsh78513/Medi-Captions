@@ -1,5 +1,6 @@
 show databases;
 -- Create the database
+DROP DATABASE FHIRDatabase;
 CREATE DATABASE FHIRDatabase;
 
 -- Use the created database
@@ -93,6 +94,9 @@ CREATE TABLE Practitioner (
     BirthDate DATE,
     Photo TEXT  -- URL or binary data
 );
+ALTER TABLE Practitioner
+ADD Username VARCHAR(50) NOT NULL,
+ADD Password VARCHAR(255) NOT NULL;
 
 CREATE TABLE PractitionerName (
     NameID INT AUTO_INCREMENT PRIMARY KEY,

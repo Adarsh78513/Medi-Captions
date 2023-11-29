@@ -87,18 +87,18 @@ VALUES
 
 
 -- Practitioner Table
-INSERT INTO Practitioner (Active, Gender, BirthDate, Photo)
+INSERT INTO Practitioner (Active, Gender, BirthDate, Photo, Username, Password)
 VALUES
-(true, 'Male', '1975-04-20', 'https://example.com/practitioner1.jpg'),
-(true, 'Female', '1980-07-15', 'https://example.com/practitioner2.jpg'),
-(true, 'Non-Binary', '1992-12-10', 'https://example.com/practitioner3.jpg'),
-(true, 'Male', '1968-09-05', 'https://example.com/practitioner4.jpg'),
-(true, 'Female', '1972-02-28', 'https://example.com/practitioner5.jpg'),
-(true, 'Male', '1985-11-15', 'https://example.com/practitioner6.jpg'),
-(true, 'Female', '1990-06-08', 'https://example.com/practitioner7.jpg'),
-(true, 'Male', '1977-01-25', 'https://example.com/practitioner8.jpg'),
-(true, 'Female', '1982-08-18', 'https://example.com/practitioner9.jpg'),
-(true, 'Male', '1995-03-07', 'https://example.com/practitioner10.jpg');
+(true, 'Male', '1975-04-20', 'https://example.com/practitioner1.jpg', 'Practitioner1', 'password1'),
+(true, 'Female', '1980-07-15', 'https://example.com/practitioner2.jpg', 'Practitioner2', 'password2'),
+(true, 'Non-Binary', '1992-12-10', 'https://example.com/practitioner3.jpg', 'Practitioner3', 'password3'),
+(true, 'Male', '1968-09-05', 'https://example.com/practitioner4.jpg', 'Practitioner4', 'password4'),
+(true, 'Female', '1972-02-28', 'https://example.com/practitioner5.jpg', 'Practitioner5', 'password5'),
+(true, 'Male', '1985-11-15', 'https://example.com/practitioner6.jpg', 'Practitioner6', 'password6'),
+(true, 'Female', '1990-06-08', 'https://example.com/practitioner7.jpg', 'Practitioner7', 'password7'),
+(true, 'Male', '1977-01-25', 'https://example.com/practitioner8.jpg', 'Practitioner8', 'password8'),
+(true, 'Female', '1982-08-18', 'https://example.com/practitioner9.jpg', 'Practitioner9', 'password9'),
+(true, 'Male', '1995-03-07', 'https://example.com/practitioner10.jpg', 'Practitioner10', 'password10');
 
 
 -- PractitionerName Table
