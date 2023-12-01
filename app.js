@@ -180,7 +180,7 @@ app.get('/caption', isPractitioner , (req, res) => {
 });
 
 // Home!!!
-app.get('/', isPractitioner , async (req, res) => {
+app.get('/', isPractitioner, async (req, res) => {
     // run query
     const query = "SELECT * FROM patient;";
     const result = await run_query(query);
