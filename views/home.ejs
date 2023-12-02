@@ -67,11 +67,53 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .logout-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            padding: 10px 20px; /* Adjusted padding */
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            margin: 0 20px; /* Added margin */
+        }
+        .logout-image {
+            height: 25px;
+            width: 30px;
+            border-radius: 1%;
+        }
+        .logout-button:hover {
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+        .logo-image{
+            position: absolute;
+            height: 35%;
+            width: 35%;
+            top: -40px;
+            right: 485px;
+            transition: .1s ease;
+        }
+        
+        .logo-image:hover {
+            -webkit-transform: rotateZ(-10deg);
+            -ms-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+            transition: 1s ease;
+        }
+
     </style>
 </head>
 <body>
     <div class="cards-container">
-        <div class="card">
+        <!-- <div class="card">
             <img src="https://pngimg.com/d/plus_PNG12.png" alt="">
             <h2>TODO: </h2>
             <p>Make a header and for navigation, common for all the pages</p>
@@ -79,7 +121,16 @@
             <p>Include a logout button in the header, it is a functioning link, just place it where needed</p>
             <h1><a href="/logout">Logout</a></h1>
             <button onclick="location.href='/moredetail'">Click Here</button>
+        </div> -->
+        <div class="logo-icon">
+            <img class="logo-image" src="https://i.postimg.cc/FKzfQQYC/Medi-Caption-removebg-preview.png" alt="">
+            
         </div>
+        
+        <div class="logout-button" onclick="location.href='/logout'">
+            <img class="logout-image" src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/logout-512.png" alt="">
+        </div>
+        
         <div style="position: absolute; top: 2px; left: 20px;">
             <img onclick="location.href='/moredetail'" style="object-fit: cover; height: 10%; width: 10%;" class="Profile_Image"src="https://upload.wikimedia.org/wikipedia/commons/4/41/Profile-720.png" alt="">
         </div>
