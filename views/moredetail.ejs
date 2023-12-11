@@ -122,8 +122,28 @@ input{
     cursor: pointer;
 }
 
+form h3{
+    margin-top: 90px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
 .home-button:hover {
     background-color: #555;
+}
+
+.genderOptions {
+    background-color: lightskyblue;
+    backdrop-filter: blur(10px);
+    border-radius: 3px;
+}
+
+.activeCheck {
+    background-color: rgba(255,255,255,0.07);
+    backdrop-filter: blur(10px);
+    border-radius: 3px;
 }
     </style>
 </head>
@@ -136,54 +156,79 @@ input{
     <form>
         <h2>Profile</h2>
 
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
 
+    
+        <h3 for="name">Name</h3>
+
+        <h3 for="gender">Gender</h3>
+
+        <h3 for="gender">birthdate</h3>
+    
         <label for="mobile">Mobile:</label>
         <input type="text" id="mobile" name="mobile" required>
-        
+    
         <label for="email">Email ID:</label>
         <input type="email" id="email" name="email" required>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        
-        <!-- New Inputs -->
-        <label for="active">Active:</label>
-        <input type="checkbox" id="active" name="active" checked>
-        
+    
+        <!-- <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required> -->
+    
+        <!-- <label for="active">Active:</label>
+        <input class="activeCheck" type="checkbox" id="active" name="active" checked style="width: 30px; height: 30px; margin-left: 10px;">
+    
         <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
+        <select class="genderOptions" id="gender" name="gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
-        </select>
-        
+        </select> -->
+    
         <label for="familyName">Family Name:</label>
         <input type="text" id="familyName" name="familyName">
-        
+    
         <label for="givenName">Given Name:</label>
         <input type="text" id="givenName" name="givenName">
-        
+    
         <label for="middleName">Middle Name:</label>
         <input type="text" id="middleName" name="middleName">
-        
+    
+        <h3>Address</h3>
         <label for="city">City:</label>
         <input type="text" id="city" name="city">
-        
+    
         <label for="district">District:</label>
         <input type="text" id="district" name="district">
-        
+    
         <label for="state">State:</label>
         <input type="text" id="state" name="state">
-        
+    
         <label for="postalCode">Postal Code:</label>
         <input type="text" id="postalCode" name="postalCode">
-        
+    
         <label for="country">Country:</label>
         <input type="text" id="country" name="country">
+    
+        <!-- <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate"> -->
 
+        <h3>Qualification</h3>
+
+        <label for="qualificationIdentifier">Qualification Identifier:</label>
+        <input type="text" id="qualificationIdentifier" name="qualificationIdentifier">
+
+        <label for="qualificationCode">Qualification Code:</label>
+        <input type="text" id="qualificationCode" name="qualificationCode">
+
+        <label for="qualificationPeriodStart">Qualification Period Start:</label>
+        <input type="date" id="qualificationPeriodStart" name="qualificationPeriodStart">
+
+        <label for="qualificationPeriodEnd">Qualification Period End:</label>
+        <input type="date" id="qualificationPeriodEnd" name="qualificationPeriodEnd">
+
+        <label for="qualificationIssuer">Qualification Issuer:</label>
+        <input type="text" id="qualificationIssuer" name="qualificationIssuer">
+    
         <button class="formbutton" type="submit">Save</button>
-    </form>
+    </form>    
 </body>
 </html>

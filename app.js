@@ -213,8 +213,8 @@ app.get('/patientf', isPractitioner, async (req, res) => {
   res.render('patientf');
 });
 
-app.get('/searchpatient', isPractitioner, async (req, res) => {
-  res.render('searchpatient');
+app.get('/previouscaptions', isPractitioner, async (req, res) => {
+  res.render('previouscaptions');
 });
 
 
