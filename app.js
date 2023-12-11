@@ -209,15 +209,14 @@ app.post('/upload', upload.single('image'), (req, res) => {
   con.query(sql, values, (err, result) => {
     if (err) {
       console.error("Error inserting image data:", err);
-      res.status(500).send("Error uploading image data");
+      // res.status(500).send("Error uploading image data");
     } else {
       console.log("Image data inserted successfully!");
-      res.status(200).send("Image uploaded and data stored successfully");
+      res.render('caption');
+      // res.status(200).send("Image uploaded and data stored successfully");
     }
   });
 });
-
-
 
 // Caption!!!
 app.get('/caption', isPractitioner , (req, res) => {
