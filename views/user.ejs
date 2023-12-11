@@ -1,11 +1,190 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medi Caption</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("https://i.pinimg.com/564x/96/c7/fd/96c7fd09a2f27ddfbaa7dee319463a0a.jpg");
+    background-size: cover;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.btn {
+    /* padding-right: 30px; */
+  font-family: 'Poppins',sans-serif;  
+  border-radius: 3px;
+  background-color: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  color: var(--white, #fff);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgb(0 0 0 / 25%);
+  height: 30px;
+  width: 50px;
+  /* float: right; */
+
+}
+.btn.btn-default {
+  background-color: rgba(255,255,255,0.25);
+}
+.btn.btn-primary {
+  background-color: rgb(0, 123, 255, 50%);
+}
+
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding: 1.5em !important;
+}
+
+
+.glassheader{
+    font-family: 'Poppins',sans-serif;
+  color: var(--white, #fff);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* box-shadow: 0 0 40px rgba(8,7,16,0.6); */
+    padding: 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25); */
+
+  height: 80px;
+}
+.glass {
+    font-family: 'Poppins',sans-serif;
+  color: var(--white, #fff);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* box-shadow: 0 0 40px rgba(8,7,16,0.6); */
+    padding: 20px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25); */
+
+  height: auto;
+}
+.glass.glass__tinted {
+  background: rgba(0, 0, 0, 0.4);
+}
+.glass.glass__clear {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+.glass.glass__frosty {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glassheader.glassheader__frosty {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+</style>
 </head>
 <body>
-    <h1>Hello <%= username %> </h1>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-3 shadow">
+    
+    </header>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 px-0 d-md-block bg-light sidebar collapse">
+        
+        </nav>
+    
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="glassheader glassheader__frosty d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center p-3 mb-3 border-bottom">
+            <h1 class="h2">Greetings - John Doe!</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary mr-2">Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary mr-2">Export</button> -->
+              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle " style="position: absolute; right: 1%; bottom: 25%;">
+                
+               Logout
+              </button>
+            </div>
+          </div>
+    
+          <div class="glass glass__frosty p-3">
+          <h2>Diagnosis</h2>
+          </div>
+          <div class="glass glass__frosty p-3">
+            
+            <h3>
+                Problem
+            </h3>
+            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+            <br>
+            <h3>Family History</h3>
+            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+            <br>
+            <h3>Family Member Condition</h3>
+            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+            <br>
+            <h3>Clinical Impression</h3>
+            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+            <br>
+            <h3>Clinical Impression Finding</h3>
+            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+            <br>
+            <h3>Detected Issue</h3>
+            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+
+            </div>
+            <div class="glass glass__frosty p-3">
+                <h2>More Details</h2>
+                <br>
+                <p>DateRecorded:  </p>
+                <br>
+                <p>OnsetDateTime:</p>
+                <br>
+                <p>Category: </p>
+                <br>
+                <p>ClinicalStatus: </p>
+         
+                </div>
+            
+        </main>
+      </div>
+    </div>
+    
+    
+    
+          <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+
+    <!-- <h1>Hello <%= username %> </h1>
     <a href="/logout">Logout</a>
     
     
@@ -29,7 +208,7 @@
         </ul>
     <% } else { %>
         <p>No problem</p>
-    <% } %>
+    <% } %> -->
 
 </body>
 </html>

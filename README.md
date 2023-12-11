@@ -20,6 +20,15 @@
 3. Use "npm axios" to install axios module
 4. Use "node app" or "nodemon app" to run the project
 
+### How to Login
+* For logging in as a patient, use the following credentials:
+    * Username: `user1`
+    * Password: `password1`
+* For logging in as a practitioner, use the following credentials:
+    * Username: `practitioner1`
+    * Password: `password1`
+* Note: Without logging in, you cannot access the website.
+
 ## Important Note
 1. Make sure you have installed nodejs and npm in your system.
 2. Make sure you have installed axios module in your system.
