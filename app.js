@@ -209,6 +209,15 @@ app.get('/user', isPatient, async (req, res) => {
   res.render('user', {username: req.session.loggeduser, result_problem: result_problem});
 });
 
+app.get('/patientf', isPractitioner, async (req, res) => {
+  res.render('patientf');
+});
+
+app.get('/searchpatient', isPractitioner, async (req, res) => {
+  res.render('searchpatient');
+});
+
+
 app.use((req, res) => {
     res.status(404).render('404');
 });
