@@ -28,10 +28,17 @@ const app = express();
 // Storage
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'images'); // Destination folder 'images'
+    const uploadPath = path.join(__dirname, 'images'); // Destination folder 'images'
+    cb(null, uploadPath);
   },
   filename: function (req, file, cb) {
-    cb(null, 'image.jpg'); // File name as 'image.jpg'
+    const username = req.body.username; // Assuming username is sent in the request body
+    const originalname = file.originalname; // Original file name
+    const ext = path.extname(originalname); // File extension
+
+    // Creating the filename - [username]_[originalname].[filetype]
+    const fileName = `${username}_${Date.now()}${ext}`;
+    cb(null, fileName);
   }
 });
 
