@@ -4,6 +4,8 @@ const exphbs = require('express-handlebars');
 const nodemailer = require('nodemailer');
 const morgan = require('morgan');
 const buffer = require('buffer');
+const multer = require('multer');
+const path = require('path');
 var mysql = require('mysql2');
 var session = require('express-session');
 const { get } = require('http');
@@ -22,6 +24,19 @@ const app = express();
 //     console.log('Server is running on port 8080');
 //     console.log('server is running on host: ' + process.env.HOST);
 // });
+
+// Storage
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'images'); // Destination folder 'images'
+  },
+  filename: function (req, file, cb) {
+    cb(null, 'image.jpg'); // File name as 'image.jpg'
+  }
+});
+
+const upload = multer({ storage });
+
 
 let IP = compIP;
 let PORT = compPort;
@@ -174,9 +189,17 @@ app.get('/upload',isPractitioner, (req, res) => {
   res.render('upload');
 });
 
+// Handle the file upload request
+app.post('/upload', upload.single('image'), (req, res) => {
+  // Assuming your form has an input field with the name 'image'
+  res.send('Image uploaded successfully!');
+});
+
 // Caption!!!
 app.get('/caption', isPractitioner , (req, res) => {
   res.render('caption');
+  // Save image to image directory
+
 });
 
 // Home!!!
