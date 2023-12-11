@@ -1,3 +1,4 @@
+-- Active: 1681828824264@@127.0.0.1@3306@fhirdatabase
 show databases;
 -- Create the database
 DROP DATABASE FHIRDatabase;
@@ -309,3 +310,12 @@ CREATE TABLE ConsentProvision (
     FOREIGN KEY (ConsentID) REFERENCES Consent(ConsentID)
 );
 
+CREATE TABLE Images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
+    image_name VARCHAR(255),
+    image_path VARCHAR(255),
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- SELECT * FROM images;
