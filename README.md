@@ -16,9 +16,10 @@
 
 ### Steps to Run the Project
 1. Clone the repository
-2. Use "npm install"
-3. Use "npm axios" to install axios module
-4. Use "node app" or "nodemon app" to run the project
+2. Use `npm install`
+3. Use `npm install multer` 
+3. Use `npm axios` to install axios module
+4. Use `node app` or `nodemon app` to run the project
 
 ### How to Login
 * For logging in as a patient, use the following credentials:
