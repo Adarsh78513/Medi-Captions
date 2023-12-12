@@ -122,15 +122,16 @@
         .leaderboard__value {
             color: #35d8ac;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 10px;
             text-align: right;
+            margin-left: 0px;
         }
 
         .leaderboard__value > span {
             opacity: .8;
             font-weight: 600;
-            font-size: 13px;
-            margin-left: 3px;
+            font-size: 5px;
+            margin-left: 0px;
         }
     
         .searchBox {
@@ -207,11 +208,11 @@
             </div>
         </header>
 
-        <main class="leaderboard__profiles">
+        <form class = "leaderboard__profiles" action="">
             <article class="leaderboard__profile">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mark Zuckerberg" class="leaderboard__picture">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Normal_posteroanterior_%28PA%29_chest_radiograph_%28X-ray%29.jpg" alt="Mark Zuckerberg" class="leaderboard__picture">
                 <span class="leaderboard__name">Mark Zuckerberg</span>
-                <span class="leaderboard__value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dicta eaque temporibus corporis expedita! Ipsa quisquam voluptatum consequuntur id ab quidem adipisci molestiae optio eaque voluptates, fugit soluta perferendis modi?<span>B</span></span>
+                <span class="leaderboard__value"> This is a chest X-ray is a diagnostic image a technique that uses low doses of radiation to capture images of the heart, lungs, and surrounding structures. It is commonly employed to assess respiratory conditions, detect abnormalities, and aid in the diagnosis of various pulmonary and cardiac disorders.<span>B</span></span>
             </article>
 
             <article class="leaderboard__profile">
@@ -249,7 +250,8 @@
                 <span class="leaderboard__name">Elizabeth Holmes</span>
                 <span class="leaderboard__value">4.5<span>B</span></span>
             </article>
-        </main>
+        </form>
+
     </article>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
