@@ -359,7 +359,17 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 
   console.log(output);
 
-  res.render('caption', {caption: output});
+  const indexOfModel = output.indexOf("Model");
+  let textAfterModel = "";
+  if (indexOfModel !== -1) {
+      textAfterModel = output.substring(indexOfModel + "Model".length).trim();
+      console.log(textAfterModel);
+  } else {
+      console.log("The word 'Model' was not found in the input text.");
+  }
+
+
+  res.render('caption', {caption: textAfterModel});
 
   // con.query(sql, values, (err, result) => {
   //   if (err) {

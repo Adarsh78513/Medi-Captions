@@ -1,6 +1,6 @@
 // Ensure that the credentials are correct for the MySQL database
 MySQLUsername = 'root';
-MySQLPassword = 'root';
+MySQLPassword = 'Sidhu@123';
 MySQLDatabase = 'fhirdatabase';
 MySQL_IP = 'localhost';
 MySQL_Port = 3306;
