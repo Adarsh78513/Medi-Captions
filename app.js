@@ -292,6 +292,10 @@ app.get('/patientf', isPractitioner, async (req, res) => {
 });
 
 app.get('/previouscaptions', isPractitioner, async (req, res) => {
+  const queery_all_caption = "SELECT P.PatientID, P.Active, P.Gender, P.BirthDate, P.DeceasedBoolean, P.DeceasedDateTime, P.MaritalStatus, P.MultipleBirthBoolean, P.MultipleBirthInteger, P.Photo, P.Username, P.Password, I.image_name, I.image_path, I.uploaded_at FROM Patient P JOIN Images I ON P.Username = I.username;";
+  const result_all_caption = await run_query(queery_all_caption);
+  console.log(queery_all_caption);
+  console.log(result_all_caption);
   res.render('previouscaptions');
 });
 
