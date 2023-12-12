@@ -126,7 +126,7 @@ main {
     
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
           <div class="glassheader glassheader__frosty d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center p-3 mb-3 border-bottom">
-            <h1 class="h2">Greetings - John Doe!</h1>
+            <h1 class="h2">Greetings - <%= result_name.Prefix %> <%= result_name.FamilyName %>!</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
                 <!-- <button type="button" class="btn btn-sm btn-outline-secondary mr-2">Share</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary mr-2">Export</button> -->
@@ -142,64 +142,58 @@ main {
           </div>
           <div class="glass glass__frosty p-3">
             <h3>Patient ID</h3>
-            <!-- Add Patient ID here -->
+            <%= result.PatientID %>
             <P></P> 
             <br>
             <h3>Full Name</h3>
-            <!-- Add Full Name here -->
+            <%= result_name.FamilyName %> <%= result_name.MiddleName %> <%= result_name.GivenName %>
             <P></P> 
             <br>
             <h3>Gender</h3>
-            <!-- Add Gender here -->
-            <p>M/F</p>
+            <%= result.Gender %>
+            <br>
             <br>
             <!-- Add Address here -->
             <h3>Address</h3>
+            Line: <p><%= result_address.Line %>,</p>
+            City: <p><%= result_address.City %>,</p>
+            District: <p><%= result_address.District %>,</p>
+            PostalCode: <p><%= result_address.PostalCode %>,</p>
+            Country: <p><%= result_address.Country %></p>
             <p></p>
             <br>
 
             <h3>Marital Status</h3>
-            <!-- Add Marital Status here -->
+            <%= result.MaritalStatus %>
             <p></p>
             <br>
             <!-- Add Contact Details here -->
             <h3>Contact Details</h3>
+            <%= result_telecom.UsageType %> <%= result_telecom.SystemType %>: <%= result_telecom.Value %>
             <p></p>
             <br>
             <h3>
                 Diagnosis
             </h3>
-            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-            <br>
-            <h3>Family History</h3>
-            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-            <br>
-            <h3>Family Member Condition</h3>
-            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-            <br>
-            <h3>Clinical Impression</h3>
-            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-            <br>
-            <h3>Clinical Impression Finding</h3>
-            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
-            <br>
             <h3>Detected Issue</h3>
-            <p> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>
+            <p>Date Detected: <%= detected_issue.DateDetected.getDate() %>-<%= detected_issue.DateDetected.getMonth() %>-<%= detected_issue.DateDetected.getFullYear() %></p>
+            <p>Code: <%= detected_issue.Code %></p>
+            <p>Severity: <%= detected_issue.Severity %></p>
+            <p>Detail: <%= detected_issue.Detail %></p>
+            <p>Mitigation: <%= detected_issue.Mitigation %></p>
+            <br>
+            <h3>Family Member</h3>
+            <p>Name: <%= family_history.Name %></p>
+            <p>Relationship: <%= family_history.Relationship %></p>
+            <p>Gender: <%= family_history.Gender %></p>
+            <p>BirthDate: <%= family_history.BornDate.getDate() %>-<%= family_history.BornDate.getMonth() %>-<%= family_history.BornDate.getFullYear() %></p>
+            <p>Note: <%= family_history.Note %></p>
+            <p>Health note: <%= family_history.ConditionNote %></p>
+            <br>
+
+
 
             </div>
-            <div class="glass glass__frosty p-3">
-                <h2>Admission Details</h2>
-                <br>
-                <p>DateRecorded:  </p>
-                <br>
-                <p>OnsetDateTime:</p>
-                <br>
-                <p>Category: </p>
-                <br>
-                <p>ClinicalStatus: </p>
-         
-                </div>
-            
         </main>
       </div>
     </div>

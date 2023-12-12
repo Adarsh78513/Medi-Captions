@@ -158,11 +158,13 @@ form h3{
 
 
     
-        <p for="name">Name</p>
+        <p for="name">Name: <%= result.FamilyName %> <%= result.GivenName %> <%= result.MiddleName %></p>
 
-        <p for="gender">Gender</p>
+        <p for="gender">Gender: <%= result.Gender %></p>
 
-        <p for="gender">birthdate</p>
+        <p for="gender">Birthdate: <%= result.BirthDate.getDate() %>-<%= result.BirthDate.getMonth() %>-<%= result.BirthDate.getFullYear() %></p>
+        
+        <p> User name: <%= username %></p>
     
         <label for="mobile">Mobile:</label>
         <input type="text" id="mobile" name="mobile" required>

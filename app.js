@@ -237,7 +237,11 @@ app.get('/', isPractitioner, async (req, res) => {
 
 // MoreDetails!!!
 app.get('/moredetail', isPractitioner, async (req, res) => {
-  res.render('moredetail');
+  const query = "SELECT PN.FamilyName, PN.GivenName, PN.MiddleName, P.Gender, P.BirthDate FROM Practitioner P JOIN PractitionerName PN ON P.PractitionerID = PN.PractitionerID WHERE P.PractitionerID = " + req.session.user_id + ";"
+  const result = await run_query(query);
+  console.log(query);
+  console.log(result[0]);
+  res.render('moredetail', {username: req.session.loggeduser, result: result[0]});
 });
 
 app.get('/logout', (req, res) => {
@@ -252,7 +256,35 @@ app.get('/user', isPatient, async (req, res) => {
   const result_problem = await run_query(query_problem);
   console.log(query_problem);
   console.log(result_problem);
-  res.render('user', {username: req.session.loggeduser, result_problem: result_problem});
+  const query_name = "SELECT * FROM patientname WHERE PatientID = " + req.session.user_ID + ";";
+  const result_name = await run_query(query_name);
+  console.log(query_name);
+  console.log(result_name);
+  const query = "SELECT * FROM patient WHERE PatientID = " + req.session.user_ID + ";";
+  const result = await run_query(query);
+  console.log(query);
+  console.log(result);
+  const query_address = "SELECT * FROM PatientAddress WHERE PatientID = " + req.session.user_ID + ";";
+  const result_address = await run_query(query_address);
+  console.log(query_address);
+  console.log(result_address);
+  const query_contact = "SELECT * FROM PatientContact WHERE PatientID = " + req.session.user_ID + ";";
+  const result_contact = await run_query(query_contact);
+  console.log(query_contact);
+  console.log(result_contact);
+  const query_telecom = "SELECT * FROM PatientTelecom WHERE PatientID = " + req.session.user_ID + ";";
+  const result_telecom = await run_query(query_telecom);
+  console.log(query_telecom);
+  console.log(result_telecom);
+  const query_family_history = "SELECT FMH.FamilyMemberHistoryID, FMH.PatientID, FMH.Date, FMH.Status, FMH.Name, FMH.Relationship, FMH.Gender, FMH.BornDate, FMH.Age, FMH.DeceasedBoolean, FMH.DeceasedDate, FMH.Note, FMC.FamilyMemberConditionID, FMC.ConditionCode, FMC.Outcome, FMC.OnsetAge, FMC.Note AS ConditionNote FROM FamilyMemberHistory FMH LEFT JOIN FamilyMemberCondition FMC ON FMH.FamilyMemberHistoryID = FMC.FamilyMemberHistoryID WHERE FMH.PatientID = " + req.session.user_ID + ";";
+  const result_family_history = await run_query(query_family_history);
+  console.log(query_family_history);
+  console.log(result_family_history);
+  const query_detected_issue = "SELECT * FROM DetectedIssue WHERE PatientID = " + req.session.user_ID + ";";
+  const result_detected_issue = await run_query(query_detected_issue);
+  console.log(query_detected_issue);
+  console.log(result_detected_issue);
+  res.render('user', {username: req.session.loggeduser, result_problem: result_problem, result_name: result_name[0], result: result[0], result_address: result_address[0], result_contact: result_contact[0], result_telecom: result_telecom[0], family_history: result_family_history[0], detected_issue: result_detected_issue[0]});
 });
 
 app.get('/patientf', isPractitioner, async (req, res) => {
