@@ -46,7 +46,8 @@
 <img width="1470" alt="Screenshot 2023-12-20 at 7 20 39 PM" src="https://github.com/Adarsh78513/Medi-Captions/assets/88873670/51426a7e-179c-49d3-bfaa-351c06389346">
 
 ### Upload Image
-<img width="735" alt="Screenshot 2023-12-20 at 7 23 42 PM" src="https://github.com/Adarsh78513/Medi-Captions/assets/88873670/f22f82e3-1226-4748-ab0f-39a1a36dc972">
+![Screenshot 2023-12-20 at 7 36 13 PM](https://github.com/Adarsh78513/Medi-Captions/assets/88873670/209b0b0d-64f3-410f-8e4c-5bda88640de7)
+
 
 ### Caption Page
 <img width="1469" alt="Screenshot 2023-12-20 at 7 24 19 PM" src="https://github.com/Adarsh78513/Medi-Captions/assets/88873670/b01a19a1-0082-424b-b477-64ec2c6165c2">
