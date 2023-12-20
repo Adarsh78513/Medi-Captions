@@ -36,3 +36,14 @@
 3. Do not change the variable names in the code.
 4. Try to maintain the code structure.
 5. Do not change the database name, table names and column names.
+
+## Introduction
+
+### Login Page
+![Screenshot 2023-12-20 at 7 19 57 PM](https://github.com/Adarsh78513/Medi-Captions/assets/88873670/1c083439-c22b-4fd2-b39c-438267042c12)
+
+### Home Page
+<img width="1470" alt="Screenshot 2023-12-20 at 7 20 39 PM" src="https://github.com/Adarsh78513/Medi-Captions/assets/88873670/51426a7e-179c-49d3-bfaa-351c06389346">
+
+### Upload Image
+### Caption Page
